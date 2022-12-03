@@ -147,7 +147,7 @@
             <div class="d-flex flex-wrap">
               <!--begin::Chart-->
               <div class="position-relative d-flex flex-center h-175px w-175px me-15 mb-7">
-                <span class="catalog-img animal-img"><img :src="getImgUrl(animal.img)"></span>
+                <span @click="showInfoModal(animal)" class="catalog-img animal-img"><img :src="getImgUrl(animal.img)"></span>
               </div>
               <!--end::Chart-->
               <!--begin::Labels-->
@@ -427,6 +427,7 @@ export default {
   border-radius: 50%;
   text-align: center;
   z-index: 1;
+  cursor: pointer;
 }
 
 .animal-img img {

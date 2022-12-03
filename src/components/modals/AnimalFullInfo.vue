@@ -10,8 +10,8 @@
           <div class="modal-header">
             <div class="text-center">
               <!--begin::Title-->
-              <h1 v-if="animal.kind === 'Кот'" class="text-dark fw-bolder">Подробное описание котика по имени {{this.animal.name}}</h1>
-              <h1 v-else class="text-dark fw-bolder">Подробное описание собачки по имени {{this.animal.name}}</h1>
+              <h1 v-if="animal.kind === 'cat'" class="text-dark fw-bolder">Подробное описание <span v-if="animal.gender === 0">котика</span><span v-else>котика</span>  по имени {{this.animal.name}}</h1>
+              <h1 v-if="animal.kind === 'dog'" class="text-dark fw-bolder">Подробное описание <span v-if="animal.gender === 0">пёсика</span><span v-else>собачки</span>  по имени {{this.animal.name}}</h1>
               <!--end::Title-->
             </div>
             <div @click="closeModal" class="btn btn-sm btn-icon btn-active-color-primary"
